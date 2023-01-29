@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:project_2/model/Data.dart';
 
-class FavoriteCard extends StatelessWidget {
-  const FavoriteCard({
+class VerticalDhkir extends StatelessWidget {
+  const VerticalDhkir({
     Key? key,
   }) : super(key: key);
 

@@ -22,7 +22,7 @@ class FavoriteDhkir extends StatelessWidget {
         backgroundColor: Colors.white,
       ),
       body: const SafeArea(
-        child: FavoriteCard(),
+        child: VerticalDhkir(),
       ),
     );
   }

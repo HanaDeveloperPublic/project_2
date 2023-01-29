@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_2/components/custom_bottom_nav.dart';
+import 'package:project_2/components/custom_bottom_navigation.dart';
 import 'package:project_2/pages/favorite_dhkir.dart';
 import 'package:project_2/pages/morning_dhkir.dart';
 import 'package:project_2/pages/night_dhkir.dart';

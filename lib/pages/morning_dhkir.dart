@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_2/components/horizontal_morning.dart';
+import 'package:project_2/components/horizontal_morning_dhkir.dart';
 
 class MorningDhkir extends StatelessWidget {
   const MorningDhkir({super.key});
