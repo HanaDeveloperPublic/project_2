@@ -1,5 +1,5 @@
 class Data {
-  static List<Dhkir> morning_dhkir = [
+  static List<Dhkir> morningDhkir = [
     Dhkir(
         name: "رَضيـتُ بِاللهِ رَبَّـاً وَبِالإسْلامِ ديـناً وَبِمُحَـمَّدٍ صلى الله عليه وسلم نَبِيّـاً",
         period: "صباحًا",
@@ -41,7 +41,7 @@ class Data {
         description: "مائة حسنة، ومُحيت عنه مائة سيئة، وكانت له حرزاً من الشيطان حتى يمسى.",
         id: "1"),
   ];
-  static List<Dhkir> night_dhkir = [
+  static List<Dhkir> nightDhkir = [
     Dhkir(
         name:
             " اللّهُـمَّ ما أَمسى بي مِـنْ نِعْـمَةٍ أَو بِأَحَـدٍ مِـنْ خَلْـقِك ، فَمِـنْكَ وَحْـدَكَ لا شريكَ لَـك ، فَلَـكَ الْحَمْـدُ وَلَـكَ الشُّكْـر",
@@ -85,7 +85,7 @@ class Data {
   ];
 
   //List<Dhkir>
-  var combine_dhkir = morning_dhkir + night_dhkir;
+  var combineDhkir = morningDhkir + nightDhkir;
 
   static List<Dhkir> favoriteDhkirList = [];
 }

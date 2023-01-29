@@ -11,7 +11,7 @@ class HorizontalNightDhkir extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          for (final nightDhkir in Data.night_dhkir)
+          for (final nightDhkir in Data.nightDhkir)
             Padding(
               padding: const EdgeInsets.only(right: 16),
               child: DhkirCard(

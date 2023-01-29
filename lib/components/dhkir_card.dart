@@ -69,7 +69,6 @@ class _DhkirCardState extends State<DhkirCard> {
                     onTap: () {
                       setState(() {
                         count = count + 1;
-                        print(count);
                       });
                     },
                     child: Container(

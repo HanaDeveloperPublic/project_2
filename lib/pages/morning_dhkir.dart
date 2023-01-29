@@ -24,7 +24,7 @@ class MorningDhkir extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
-          image: AssetImage("assest/arabic_back.jpeg"),
+          image: AssetImage("assets/arabic_back.jpeg"),
           fit: BoxFit.cover,
         )),
         child: ListView(

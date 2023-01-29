@@ -11,7 +11,7 @@ class HorizontalMorningDhkir extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          for (final morningDhkir in Data.morning_dhkir)
+          for (final morningDhkir in Data.morningDhkir)
             Padding(
               padding: const EdgeInsets.only(right: 16),
               child: DhkirCard(dhkir: morningDhkir),

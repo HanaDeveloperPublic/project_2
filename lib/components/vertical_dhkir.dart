@@ -8,7 +8,7 @@ class FavoriteCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       child: SingleChildScrollView(
         child: Column(
           children: [

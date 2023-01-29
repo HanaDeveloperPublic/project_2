@@ -18,7 +18,7 @@ class CustomBottomNavigation extends StatelessWidget {
       items: const [
         BottomNavigationBarItem(
           icon: ImageIcon(
-            AssetImage("assest/hand.png"),
+            AssetImage("assets/hand.png"),
             color: Colors.black,
             size: 24,
           ),
@@ -26,7 +26,7 @@ class CustomBottomNavigation extends StatelessWidget {
         ),
         BottomNavigationBarItem(
           icon: ImageIcon(
-            AssetImage("assest/hand.png"),
+            AssetImage("assets/hand.png"),
             color: Colors.black,
             size: 24,
           ),
