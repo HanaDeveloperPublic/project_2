@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_2/model/Data.dart';
+import 'package:project_2/model/data_model.dart';
 
 class VerticalDhkir extends StatelessWidget {
   const VerticalDhkir({

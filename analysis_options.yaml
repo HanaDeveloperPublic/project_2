@@ -60,3 +60,16 @@ dart_code_metrics:
         - prefer-extracting-callbacks: false
         - arguments-ordering:
               child-last: true
+        - prefer-correct-identifier-length:
+              exceptions: ['a']
+              max-identifier-length: 30
+              min-identifier-length: 2
+        - no-equal-arguments:
+              ignored-parameters:
+                  - height
+                  - width
+        - newline-before-return: false
+        - avoid-ignoring-return-values: false
+        - prefer-match-file-name:
+              exclude:
+                  - lib/constants/**

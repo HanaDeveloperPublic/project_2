@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_2/components/dhkir_card.dart';
-import 'package:project_2/model/Data.dart';
+import 'package:project_2/model/data_model.dart';
 
 class HorizontalNightDhkir extends StatelessWidget {
   const HorizontalNightDhkir({super.key});
