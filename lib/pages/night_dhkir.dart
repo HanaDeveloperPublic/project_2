@@ -24,7 +24,7 @@ class NightDhkir extends StatelessWidget {
         body: Container(
           decoration: const BoxDecoration(
               image: DecorationImage(
-            image: AssetImage("assest/ar_back.jpeg"),
+            image: AssetImage("assest/arabic_back.jpeg"),
             fit: BoxFit.cover,
           )),
           child: ListView(

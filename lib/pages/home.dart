@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_2/components/custom_bottom_nav.dart';
 import 'package:project_2/pages/favorite_dhkir.dart';
 import 'package:project_2/pages/morning_dhkir.dart';
 import 'package:project_2/pages/night_dhkir.dart';
@@ -13,6 +14,12 @@ class Home extends StatefulWidget {
 var currentIndex = 0;
 
 class _HomeState extends State<Home> {
+  void _onItemTapped(int index) {
+    setState(() {
+      currentIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final pages = [
@@ -21,42 +28,9 @@ class _HomeState extends State<Home> {
       const FavoriteDhkir(),
     ];
     return Scaffold(
-        bottomNavigationBar: BottomNavigationBar(
-          unselectedLabelStyle: const TextStyle(color: Colors.grey, fontSize: 14),
-          backgroundColor: Colors.white,
-          fixedColor: Colors.black,
-          unselectedItemColor: Colors.grey,
+        bottomNavigationBar: CustomBottomNavigation(
           currentIndex: currentIndex,
-          onTap: (newIndex) {
-            currentIndex = newIndex;
-            setState(() {});
-          },
-          items: const [
-            BottomNavigationBarItem(
-              icon: ImageIcon(
-                AssetImage("assest/hand.png"),
-                color: Colors.black,
-                size: 24,
-              ),
-              label: 'Morning Dhkir',
-            ),
-            BottomNavigationBarItem(
-              icon: ImageIcon(
-                AssetImage("assest/hand.png"),
-                color: Colors.black,
-                size: 24,
-              ),
-              label: 'Night Dhkir',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.favorite,
-                color: Colors.black,
-                size: 24,
-              ),
-              label: 'Favorite Dhkir',
-            ),
-          ],
+          onTap: _onItemTapped,
         ),
         body: pages[currentIndex]);
   }
