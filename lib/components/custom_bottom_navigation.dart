@@ -17,6 +17,14 @@ class CustomBottomNavigation extends StatelessWidget {
       onTap: onTap,
       items: const [
         BottomNavigationBarItem(
+          icon: Icon(
+            Icons.home,
+            color: Colors.black,
+            size: 24,
+          ),
+          label: 'الرئيسية',
+        ),
+        BottomNavigationBarItem(
           icon: ImageIcon(
             AssetImage("assets/hand.png"),
             color: Colors.black,

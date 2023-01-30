@@ -83,7 +83,23 @@ class Data {
         description: "مائة حسنة، ومُحيت عنه مائة سيئة، وكانت له حرزاً من الشيطان حتى يمسى.",
         id: "2"),
   ];
+  static List<Quran> quranList = [
+    Quran(name: " كل من عليها فان ويبقى وجه ربك ذو الجلال والاكرام ", id: "1"),
+    // Quraan(name: "ادعوا ربكم تضرعا وخفية أنه لا يحب المعتدين ", id: "2"),
+    // Quraan(name: " واذكر اسم ربك وتبتل إليه تبتيلا", id: "3"),
+    // Quraan(name: " والله ولي الصابرين", id: "4"),
+    // Quraan(name: " ومن يتق الله يجعل له من أمره يسرا", id: "5"),
+    // Quraan(name: " واتقوا الله لعلكم تفلحون", id: "6"),
+  ];
 
+  static List<Quran> duaaList = [
+    Quran(name: " كل من عليها فان ويبقى وجه ربك ذو الجلال والاكرام ", id: "1"),
+    Quran(name: "ادعوا ربكم تضرعا وخفية أنه لا يحب المعتدين ", id: "2"),
+    Quran(name: " واذكر اسم ربك وتبتل إليه تبتيلا", id: "3"),
+    Quran(name: " والله ولي الصابرين", id: "4"),
+    Quran(name: " ومن يتق الله يجعل له من أمره يسرا", id: "5"),
+    Quran(name: " واتقوا الله لعلكم تفلحون", id: "6"),
+  ];
   //List<Dhkir>
   var combineDhkir = morningDhkir + nightDhkir;
 
@@ -102,4 +118,10 @@ class Dhkir {
       required this.numberOfRepeat,
       required this.description,
       required this.id});
+}
+
+class Quran {
+  String name;
+  String id;
+  Quran({required this.name, required this.id});
 }

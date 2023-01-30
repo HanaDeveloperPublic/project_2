@@ -4,6 +4,8 @@ import 'package:project_2/pages/favorite_dhkir.dart';
 import 'package:project_2/pages/morning_dhkir.dart';
 import 'package:project_2/pages/night_dhkir.dart';
 
+import 'home_page.dart';
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -23,6 +25,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     final pages = [
+      const HomePage(),
       const MorningDhkir(),
       const NightDhkir(),
       const FavoriteDhkir(),
