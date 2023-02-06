@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:project_2/components/custom_bottom_navigation.dart';
 import 'package:project_2/pages/favorite_dhkir.dart';
-import 'package:project_2/pages/morning_dhkir.dart';
-import 'package:project_2/pages/night_dhkir.dart';
+import 'package:project_2/pages/mix_page.dart';
+import 'package:project_2/pages/tabs_page.dart';
 
-import 'home_page.dart';
+import 'home_page_test.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -25,16 +25,16 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     final pages = [
-      const HomePage(),
-      const MorningDhkir(),
-      const NightDhkir(),
+      const HomePageTest(),
+      const TabsPage(),
+      const MixPage(),
+      // const MorningDhkir(),
+      // const NightDhkir(),
       const FavoriteDhkir(),
     ];
     return Scaffold(
-        bottomNavigationBar: CustomBottomNavigation(
-          currentIndex: currentIndex,
-          onTap: _onItemTapped,
-        ),
-        body: pages[currentIndex]);
+      body: pages[currentIndex],
+      bottomNavigationBar: CustomBottomNavigation(currentIndex: currentIndex, onTap: _onItemTapped),
+    );
   }
 }

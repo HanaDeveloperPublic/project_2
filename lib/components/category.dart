@@ -27,23 +27,23 @@ class Category extends StatelessWidget {
                 },
                 child: Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
                     color: Colors.white.withOpacity(0.5),
                     border: Border.all(color: Colors.grey.withOpacity(0.3), width: 0.5),
+                    borderRadius: const BorderRadius.all(Radius.circular(8)),
                   ),
                   child: Row(
                     children: [
                       Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
                         Container(
-                          height: 50,
-                          width: 50,
                           decoration: const BoxDecoration(),
+                          width: 50,
+                          height: 50,
                           child: const Icon(Icons.bedtime_outlined),
                         ),
                       ]),
                       Column(
                         children: const [
-                          MyText(' ورد المساء', fontSize: 30),
+                          MyText(" ورد المساء", fontSize: 30),
                         ],
                       ),
                     ],
@@ -65,17 +65,17 @@ class Category extends StatelessWidget {
                 },
                 child: Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
                     color: Colors.white.withOpacity(0.5),
                     border: Border.all(color: Colors.grey.withOpacity(0.3), width: 0.5),
+                    borderRadius: const BorderRadius.all(Radius.circular(8)),
                   ),
                   child: Row(
                     children: [
                       Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
                         Container(
-                          height: 50,
-                          width: 50,
                           decoration: const BoxDecoration(),
+                          width: 50,
+                          height: 50,
                           child: const Icon(
                             Icons.sunny,
                             color: Colors.black,
@@ -111,21 +111,19 @@ class Category extends StatelessWidget {
                 },
                 child: Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
                     color: Colors.white.withOpacity(0.5),
                     border: Border.all(color: Colors.grey.withOpacity(0.3), width: 0.5),
+                    borderRadius: const BorderRadius.all(Radius.circular(8)),
                   ),
                   child: Row(
                     children: [
                       Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
                         Container(
-                          height: 50,
-                          width: 50,
                           decoration: const BoxDecoration(
-                              image: DecorationImage(
-                            image: AssetImage("assets/tasbih.png"),
-                            fit: BoxFit.cover,
-                          )),
+                            image: DecorationImage(image: AssetImage("assets/tasbih.png"), fit: BoxFit.cover),
+                          ),
+                          width: 50,
+                          height: 50,
                         ),
                       ]),
                       Column(
@@ -147,27 +145,25 @@ class Category extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Duaa()),
+                    MaterialPageRoute(
+                      builder: (context) => const Duaa(),
+                    ),
                   );
                 },
                 child: Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
                     color: Colors.white.withOpacity(0.5),
                     border: Border.all(color: Colors.grey.withOpacity(0.3), width: 0.5),
+                    borderRadius: const BorderRadius.all(Radius.circular(8)),
                   ),
                   child: Row(
                     children: [
                       Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
                         Container(
-                          height: 50,
-                          width: 50,
                           decoration: const BoxDecoration(),
-                          child: const ImageIcon(
-                            AssetImage("assets/hand.png"),
-                            color: Colors.black,
-                            size: 20,
-                          ),
+                          width: 50,
+                          height: 50,
+                          child: const ImageIcon(AssetImage("assets/hand.png"), size: 20, color: Colors.black),
                         ),
                       ]),
                       Column(

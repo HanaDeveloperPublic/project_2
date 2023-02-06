@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:project_2/components/tasbih.dart';
 
 class TabsPage extends StatefulWidget {
@@ -9,74 +10,62 @@ class TabsPage extends StatefulWidget {
 }
 
 class _TabsPageState extends State<TabsPage> {
+  final tabs = TextEditingController();
+  var numOfTab = 0;
   var likeColor = Colors.white;
   var count = 0;
+  var percent = 0.0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
       appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text(
-              "التسبيح",
-              style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 24),
-            ),
-          ],
-        ),
+        title: const Text("التسبيح", style: TextStyle(color: Colors.black, fontSize: 24, fontWeight: FontWeight.w500)),
+        backgroundColor: Colors.white.withOpacity(0.9),
         centerTitle: true,
-        backgroundColor: Colors.white,
       ),
-      body:
-          // Container(
-          //   decoration: const BoxDecoration(
-          //       image: DecorationImage(
-          //     image: AssetImage("assets/arabic_back.jpeg"),
-          //     fit: BoxFit.cover,
-          //   )),
-          //   child:
-          ListView(padding: const EdgeInsets.all(24), children: [
-        Column(
-          children: [
-            //favoriteDhkirList
-            // for (var combineDhkir in Data.favoriteDhkirList)
-            const LargeCategory2(),
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(image: AssetImage("assets/ombreh.jpeg"), fit: BoxFit.cover),
+        ),
+        child: ListView(padding: const EdgeInsets.all(24), children: [
+          Column(children: [
+            const Padding(
+              padding: EdgeInsets.only(top: 30),
+              child: LargeCategory2(),
+            ),
+            const SizedBox(
+              height: 8,
+            ),
             Padding(
               padding: const EdgeInsets.only(right: 20, left: 35, top: 30),
               child: InkWell(
-                onTap: () {
-                  setState(() {
-                    count = count + 1;
-                  });
-                },
-                child: Container(
-                  height: 200,
-                  width: 200,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.black.withOpacity(0.5),
-                  ),
-                ),
-              ),
+                  onTap: () {
+                    setState(() {
+                      count = count + 1;
+                      percent = percent + 1.0;
+                    });
+                  },
+                  child: Padding(
+                      padding: const EdgeInsets.only(top: 25),
+                      child: CircularPercentIndicator(
+                        radius: 70.0,
+                        lineWidth: 8.0,
+                        animation: true,
+                        percent: double.parse(percent.toString()) /
+                            100, // here we're using the percentage to be in sync with the color of the text
+                        center: Text(
+                          "$count",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, color: Colors.black.withOpacity(0.7), fontSize: 24.0),
+                        ),
+                        circularStrokeCap: CircularStrokeCap.round,
+                        progressColor: Colors.grey[700],
+                        backgroundColor: Colors.white,
+                      ))),
             ),
-            Padding(
-              padding: const EdgeInsets.all(5),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    " مجموع التسبيحات : $count",
-                    textAlign: TextAlign.end,
-                    style: TextStyle(fontSize: 20, color: Colors.black.withOpacity(0.5), fontWeight: FontWeight.w700),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ]),
-      //  ),
+          ]),
+        ]),
+      ),
     );
   }
 }

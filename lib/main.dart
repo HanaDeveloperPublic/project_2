@@ -1,21 +1,10 @@
 import 'package:flutter/material.dart';
-
-import 'pages/home.dart';
+import 'package:project_2/app.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
   runApp(
-    const MyApp(),
+    const App(),
   );
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Home(),
-    );
-  }
 }

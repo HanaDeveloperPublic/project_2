@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_2/model/data_model.dart';
 
 class CustomBottomNavigation extends StatelessWidget {
   const CustomBottomNavigation({super.key, this.currentIndex = 0, required this.onTap});
@@ -9,46 +10,33 @@ class CustomBottomNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      unselectedLabelStyle: const TextStyle(color: Colors.grey, fontSize: 14),
-      backgroundColor: Colors.white,
-      fixedColor: Colors.black,
-      unselectedItemColor: Colors.grey,
-      currentIndex: currentIndex,
-      onTap: onTap,
-      items: const [
-        BottomNavigationBarItem(
-          icon: Icon(
-            Icons.home,
-            color: Colors.black,
-            size: 24,
-          ),
+      items: [
+        const BottomNavigationBarItem(
+          icon: Icon(Icons.home, size: 24, color: Colors.black),
           label: 'الرئيسية',
         ),
-        BottomNavigationBarItem(
-          icon: ImageIcon(
-            AssetImage("assets/hand.png"),
-            color: Colors.black,
-            size: 24,
-          ),
-          label: 'أذكار الصباح',
+        const BottomNavigationBarItem(
+          icon: Icon(Icons.front_hand_outlined, color: Colors.black),
+          label: ' تسبيح',
+        ),
+        const BottomNavigationBarItem(
+          icon: Icon(Icons.home_max, color: Colors.black),
+          label: ' منوعات',
         ),
         BottomNavigationBarItem(
-          icon: ImageIcon(
-            AssetImage("assets/hand.png"),
-            color: Colors.black,
-            size: 24,
-          ),
-          label: "أذكار المساء",
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(
-            Icons.favorite,
-            color: Colors.black,
-            size: 24,
-          ),
+          icon: Icon(Icons.favorite,
+              size: 24,
+              color:
+                  Data.favoriteAyahList.isNotEmpty && Data.favoriteDhkirList.isNotEmpty ? Colors.purple : Colors.black),
           label: 'المفضلة',
         ),
       ],
+      onTap: onTap,
+      currentIndex: currentIndex,
+      fixedColor: Colors.black,
+      backgroundColor: Colors.white,
+      unselectedItemColor: Colors.grey,
+      unselectedLabelStyle: const TextStyle(color: Colors.grey, fontSize: 14),
     );
   }
 }

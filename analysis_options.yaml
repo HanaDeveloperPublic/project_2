@@ -58,6 +58,7 @@ dart_code_metrics:
         - prefer-conditional-expressions
         - no-equal-then-else
         - prefer-extracting-callbacks: false
+        - no-magic-number: false
         - arguments-ordering:
               child-last: true
         - prefer-correct-identifier-length:
@@ -69,6 +70,8 @@ dart_code_metrics:
                   - height
                   - width
         - newline-before-return: false
+        - prefer-moving-to-variable: false
+        - avoid-wrapping-in-padding: false
         - avoid-ignoring-return-values: false
         - prefer-match-file-name:
               exclude:

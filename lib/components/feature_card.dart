@@ -17,21 +17,19 @@ class FeatureCard extends StatelessWidget {
       },
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
           color: Colors.white.withOpacity(0.5),
           border: Border.all(color: Colors.grey.withOpacity(0.3), width: 0.5),
+          borderRadius: const BorderRadius.all(Radius.circular(8)),
         ),
         child: Row(
           children: [
             Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
               Container(
-                height: 50,
-                width: 120,
                 decoration: const BoxDecoration(
-                    image: DecorationImage(
-                  image: AssetImage("assets/sunrais.png"),
-                  fit: BoxFit.cover,
-                )),
+                  image: DecorationImage(image: AssetImage("assets/sunrais.png"), fit: BoxFit.cover),
+                ),
+                width: 120,
+                height: 50,
               ),
             ]),
             Column(

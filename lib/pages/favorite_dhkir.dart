@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_2/components/vertical_ayah.dart';
 import 'package:project_2/components/vertical_dhkir.dart';
 
 class FavoriteDhkir extends StatelessWidget {
@@ -7,22 +8,21 @@ class FavoriteDhkir extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
       appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        title: const Text(" المفضلة", style: TextStyle(color: Colors.black, fontSize: 24, fontWeight: FontWeight.w500)),
+        backgroundColor: Colors.white.withOpacity(0.9),
+        centerTitle: true,
+      ),
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(image: AssetImage("assets/ombreh.jpeg"), fit: BoxFit.cover),
+        ),
+        child: ListView(
           children: const [
-            Text(
-              "أذكاري المفضلة",
-              style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 24),
-            ),
+            VerticalDhkir(),
+            VerticalAyah(),
           ],
         ),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-      ),
-      body: const SafeArea(
-        child: VerticalDhkir(),
       ),
     );
   }

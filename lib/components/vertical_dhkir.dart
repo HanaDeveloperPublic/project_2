@@ -12,54 +12,42 @@ class VerticalDhkir extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            //favoriteDhkirList
             for (var combineDhkir in Data.favoriteDhkirList)
               Padding(
                 padding: const EdgeInsets.only(right: 20, left: 35, top: 30),
                 child: Container(
-                  height: 200,
+                  decoration:
+                      BoxDecoration(color: Colors.grey.withOpacity(0.3), borderRadius: BorderRadius.circular(20)),
                   width: 350,
-                  decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 20),
-                        child: Text(
-                          combineDhkir.name,
-                          textAlign: TextAlign.center,
-                          style: const TextStyle(fontSize: 20, color: Colors.black),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(5),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              combineDhkir.numberOfRepeat,
-                              textAlign: TextAlign.center,
+                  height: 200,
+                  child: Column(children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20),
+                      child: Text(combineDhkir.name,
+                          textAlign: TextAlign.center, style: const TextStyle(fontSize: 20, color: Colors.black)),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(5),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(combineDhkir.numberOfRepeat,
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black.withOpacity(0.5), fontWeight: FontWeight.w700),
-                            ),
-                          ],
-                        ),
+                                  color: Colors.black.withOpacity(0.5), fontSize: 20, fontWeight: FontWeight.w700),
+                              textAlign: TextAlign.center),
+                        ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(5),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              combineDhkir.period,
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  fontSize: 20, color: Colors.black.withOpacity(0.5), fontWeight: FontWeight.w700),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(5),
+                      child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                        Text(combineDhkir.period,
+                            style: TextStyle(
+                                color: Colors.black.withOpacity(0.5), fontSize: 20, fontWeight: FontWeight.w700),
+                            textAlign: TextAlign.center)
+                      ]),
+                    ),
+                  ]),
                 ),
               ),
           ],

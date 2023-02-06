@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../pages/tabs_page.dart';
 import 'my_text.dart';
 
 class LargeCategory2 extends StatelessWidget {
@@ -7,11 +8,18 @@ class LargeCategory2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const TabsPage()),
+        );
+      },
+      child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
           color: Colors.white.withOpacity(0.5),
           border: Border.all(color: Colors.grey.withOpacity(0.3), width: 0.5),
+          borderRadius: const BorderRadius.all(Radius.circular(8)),
         ),
         child: Column(
           children: [
@@ -20,7 +28,6 @@ class LargeCategory2 extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: const [
-                  // MyText(' أهلا بك ', fontSize: 30),
                   MyText(
                     ' التسبيح',
                     fontSize: 30,
@@ -41,9 +48,9 @@ class LargeCategory2 extends StatelessWidget {
                       Row(mainAxisAlignment: MainAxisAlignment.end, children: [
                         Container(
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
                             color: Colors.white.withOpacity(0.5),
                             border: Border.all(color: Colors.grey.withOpacity(0.3), width: 0.5),
+                            borderRadius: const BorderRadius.all(Radius.circular(8)),
                           ),
                           child: const MyText("استغفر الله ", fontSize: 20),
                         ),
@@ -51,9 +58,9 @@ class LargeCategory2 extends StatelessWidget {
                       Row(mainAxisAlignment: MainAxisAlignment.end, children: [
                         Container(
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
                             color: Colors.grey.withOpacity(0.5),
                             border: Border.all(color: Colors.grey.withOpacity(0.3), width: 0.5),
+                            borderRadius: const BorderRadius.all(Radius.circular(8)),
                           ),
                           child: const MyText("استغفر الله ", fontSize: 20),
                         ),
@@ -61,9 +68,9 @@ class LargeCategory2 extends StatelessWidget {
                       Row(mainAxisAlignment: MainAxisAlignment.end, children: [
                         Container(
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
                             color: Colors.black.withOpacity(0.3),
                             border: Border.all(color: Colors.grey.withOpacity(0.3), width: 0.5),
+                            borderRadius: const BorderRadius.all(Radius.circular(8)),
                           ),
                           child: const MyText("استغفر الله ", fontSize: 20),
                         ),
@@ -78,9 +85,9 @@ class LargeCategory2 extends StatelessWidget {
                       Row(mainAxisAlignment: MainAxisAlignment.end, children: [
                         Container(
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
                             color: Colors.white.withOpacity(0.5),
                             border: Border.all(color: Colors.grey.withOpacity(0.3), width: 0.5),
+                            borderRadius: const BorderRadius.all(Radius.circular(8)),
                           ),
                           child: const MyText("الحمد الله ", fontSize: 20),
                         ),
@@ -88,19 +95,18 @@ class LargeCategory2 extends StatelessWidget {
                       Row(mainAxisAlignment: MainAxisAlignment.end, children: [
                         Container(
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: Colors.grey.withOpacity(0.5),
-                            border: Border.all(color: Colors.grey.withOpacity(0.3), width: 0.5),
-                          ),
+                              color: Colors.grey.withOpacity(0.5),
+                              border: Border.all(color: Colors.grey.withOpacity(0.3), width: 0.5),
+                              borderRadius: BorderRadius.circular(8)),
                           child: const MyText("الحمد الله ", fontSize: 20),
                         ),
                       ]),
                       Row(mainAxisAlignment: MainAxisAlignment.end, children: [
                         Container(
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
                             color: Colors.black.withOpacity(0.3),
                             border: Border.all(color: Colors.grey.withOpacity(0.3), width: 0.5),
+                            borderRadius: const BorderRadius.all(Radius.circular(8)),
                           ),
                           child: const MyText("الحمد الله ", fontSize: 20),
                         ),
@@ -115,9 +121,9 @@ class LargeCategory2 extends StatelessWidget {
                       Row(mainAxisAlignment: MainAxisAlignment.end, children: [
                         Container(
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
                             color: Colors.white.withOpacity(0.5),
                             border: Border.all(color: Colors.grey.withOpacity(0.3), width: 0.5),
+                            borderRadius: const BorderRadius.all(Radius.circular(8)),
                           ),
                           child: const MyText("سبحان الله", fontSize: 20),
                         ),
@@ -125,19 +131,18 @@ class LargeCategory2 extends StatelessWidget {
                       Row(mainAxisAlignment: MainAxisAlignment.end, children: [
                         Container(
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: Colors.grey.withOpacity(0.5),
-                            border: Border.all(color: Colors.grey.withOpacity(0.3), width: 0.5),
-                          ),
+                              color: Colors.grey.withOpacity(0.5),
+                              border: Border.all(color: Colors.grey.withOpacity(0.3), width: 0.5),
+                              borderRadius: BorderRadius.circular(8)),
                           child: const MyText("سبحان الله", fontSize: 20),
                         ),
                       ]),
                       Row(mainAxisAlignment: MainAxisAlignment.end, children: [
                         Container(
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
                             color: Colors.black.withOpacity(0.3),
                             border: Border.all(color: Colors.grey.withOpacity(0.3), width: 0.5),
+                            borderRadius: const BorderRadius.all(Radius.circular(8)),
                           ),
                           child: const MyText("سبحان الله", fontSize: 20),
                         ),
@@ -151,6 +156,8 @@ class LargeCategory2 extends StatelessWidget {
               height: 12,
             ),
           ],
-        ));
+        ),
+      ),
+    );
   }
 }

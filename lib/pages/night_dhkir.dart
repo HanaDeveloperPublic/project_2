@@ -7,35 +7,26 @@ class NightDhkir extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color(0xFFf5f7f9),
-        appBar: AppBar(
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              Text(
-                " أذكار المساء",
-                style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 24),
-              ),
-            ],
-          ),
-          centerTitle: true,
-          backgroundColor: Colors.white,
+      appBar: AppBar(
+        leading: InkWell(
+          onTap: () => Navigator.pop(context, false),
+          child: Icon(Icons.arrow_back_ios, color: Colors.grey.withOpacity(0.8)),
         ),
-        body: Container(
-          decoration: const BoxDecoration(
-              image: DecorationImage(
-            image: AssetImage("assets/arabic_back.jpeg"),
-            fit: BoxFit.cover,
-          )),
-          child: ListView(
-            padding: const EdgeInsets.all(24),
-            children: const [
-              SizedBox(
-                height: 90,
-              ),
-              HorizontalNightDhkir()
-            ],
-          ),
-        ));
+        title: const Text(" أذكار المساء",
+            style: TextStyle(color: Colors.black, fontSize: 24, fontWeight: FontWeight.w500)),
+        backgroundColor: Colors.white.withOpacity(0.9),
+        centerTitle: true,
+      ),
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(image: AssetImage("assets/ombreh.jpeg"), fit: BoxFit.cover),
+        ),
+        child: ListView(
+          padding: const EdgeInsets.all(24),
+          children: const [SizedBox(height: 90), HorizontalNightDhkir()],
+        ),
+      ),
+      backgroundColor: const Color(0xFFf5f7f9),
+    );
   }
 }
